@@ -168,7 +168,7 @@ from source, so editing a fork is all that is needed.
 |---|---|
 | `mgu-repo.json` | the Store entry (`requires` cluster-render) |
 | `apps/custom_hud_gauges/mgu-app.json` | the source package: modules and staged tree. The head unit links it against its own oap-sdk; no BMW code is in this repository |
-| `custom_hud_gauges@0.2.0/` | the staged tree: package, `manifest.json` (the SOME/IP interfaces), the page |
+| `custom_hud_gauges@0.2.1/` | the staged tree: package, `manifest.json` (the SOME/IP interfaces), the page |
 | `src/custom_hud_gauges.js` | the OnlineApp and its page |
 | `src/vehicle_source.js` | the car's values, the switches' effect |
 | `src/engine_reader.js`, `src/tasu_link.js` | the reads and the read-only check |

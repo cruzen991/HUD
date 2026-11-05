@@ -1,6 +1,6 @@
 {
   "name": "custom_hud_gauges",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "RPM bar, speed, boost and intake air temperature on the head-up display, from the car's own values, with on/off switches",
   "private": false,
   "main": "javascript/runner.js",

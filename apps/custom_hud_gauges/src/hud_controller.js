@@ -18,6 +18,7 @@
  */
 
 const EventEmitter = require('events');
+const fs = require('fs');
 const { ClusterRender } = require('./cluster_render_client.js');
 const { Hud } = require('./hud_render.js');
 const { demoSample } = require('./hud_demo.js');
@@ -337,10 +338,27 @@ class HudController extends EventEmitter {
 
     detailText() {
         if (!this.connected) {
-            return 'Renderer: not connected';
+            return `Renderer: not connected (${this._why()})`;
         }
         const size = this.hudSize ? `${this.hudSize.w}x${this.hudSize.h}` : 'none';
         return `Renderer ${this.backend || '?'}, HUD ${size}`;
+    }
+
+    /* Why the renderer cannot be reached, from what the socket looks like. */
+    _why() {
+        const file = this.client.path;
+        if (!file) {
+            return 'no socket path';
+        }
+        try {
+            fs.statSync(file);
+            return `${file} is there but refuses the connection`;
+        } catch (e) {
+            if (e && e.code === 'ENOENT') {
+                return `cluster-render is not running: no ${file}`;
+            }
+            return `${file}: ${(e && e.code) || 'unreadable'}`;
+        }
     }
 
     canStart() {

@@ -5,7 +5,7 @@
     "type": "OnlineApp",
     "name": "custom_hud_gauges",
     "vendor": "custom_hud_gauges",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "defaultLanguage": "en_GB",
     "uiDescriptions": [
       {
