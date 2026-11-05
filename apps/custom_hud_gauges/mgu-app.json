@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "custom_hud_gauges",
+  "version": "0.2.0",
+  "tree": "custom_hud_gauges@0.2.0",
+  "modules": [
+    "src/custom_hud_gauges.js",
+    "src/hud_controller.js",
+    "src/vehicle_source.js",
+    "src/engine_reader.js",
+    "src/tasu_link.js",
+    "src/someip_native.js",
+    "src/settings.js",
+    "src/hud_render.js",
+    "src/hud_font.js",
+    "src/hud_demo.js",
+    "src/cluster_render_client.js"
+  ],
+  "sdk": [
+    "oap-sdk/src/core/OnlineApp.js",
+    "oap-sdk/src/logging/logging",
+    "oap-sdk/src/someip/someipBuilders"
+  ]
+}

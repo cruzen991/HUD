@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "components": [
+    {
+      "id": "custom_hud_gauges",
+      "kind": "app",
+      "path": "apps/custom_hud_gauges",
+      "build": "unit",
+      "title": "HUD gauges",
+      "description": "RPM bar, speed, boost and intake air temperature on the HUD, from the car, with on/off switches in the car.",
+      "requires": { "cluster-render": "0.3.7" },
+      "uninstallable": true,
+      "mguHmi": ["ID7"]
+    }
+  ]
+}

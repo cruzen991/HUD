@@ -1,0 +1,43 @@
+{
+  "name": "custom_hud_gauges",
+  "version": "0.2.0",
+  "description": "RPM bar, speed, boost and intake air temperature on the head-up display, from the car's own values, with on/off switches",
+  "private": false,
+  "main": "javascript/runner.js",
+  "oapAppSettings": {
+    "maxDiskUsage": 26214400,
+    "cpuLimit": 50,
+    "memoryThresholdKB": 153600,
+    "priority": "PRIO_MEDIUM",
+    "visibility": "FOREGROUND",
+    "latencyClass": "FOREGROUND",
+    "loggingId": "HUDG",
+    "userLoginRequired": false,
+    "backgroundPriority": 150,
+    "someipManifest": "manifest.json"
+  },
+  "files": [
+    "config",
+    "rhmiData",
+    "package.json",
+    "npm-shrinkwrap.json",
+    "permissions.json",
+    "javascript",
+    "manifest.json",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "oap-sdk": "24.10.2"
+  },
+  "engines": {
+    "node": ">=8.7.0"
+  },
+  "keywords": [
+    "node",
+    "BMW",
+    "Online",
+    "HUD"
+  ],
+  "license": "GPL-3.0-or-later",
+  "mguLocalOnly": true
+}
